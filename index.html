@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Bachillerato | Escuelas Salesianas María Auxiliadora · Nervión (Sevilla)</title>
+  <meta name="description" content="Bachillerato: calendario de exámenes, suscripción a los calendarios de cada clase y enlaces de la PEvAU.">
+  <meta name="theme-color" content="#b4be00">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" sizes="180x180" href="icon-180.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Bachillerato">
+  <meta name="application-name" content="Bachillerato">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <!-- Vista previa al compartir el enlace (WhatsApp, Teams, correo) -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="Escuelas Salesianas María Auxiliadora">
+  <meta property="og:title" content="Bachillerato | Escuelas Salesianas María Auxiliadora · Nervión (Sevilla)">
+  <meta name="twitter:title" content="Bachillerato | Escuelas Salesianas María Auxiliadora · Nervión (Sevilla)">
+  <meta property="og:description" content="Calendario de exámenes de Bachillerato, suscripción a los calendarios de cada clase y enlaces de la PEvAU.">
+  <meta name="twitter:description" content="Calendario de exámenes de Bachillerato, suscripción a los calendarios de cada clase y enlaces de la PEvAU.">
+  <meta property="og:url" content="https://bachillerato-nervion.vercel.app/">
+  <meta property="og:image" content="https://bachillerato-nervion.vercel.app/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Bachillerato · Escuelas Salesianas María Auxiliadora">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://bachillerato-nervion.vercel.app/og-image.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="config.js"></script>
+  <script src="datos.js"></script>
+</head>
+<body>
+  <header class="top">
+    <a href="./"><img class="logo" src="logo.svg" alt="Salesianas Nervión"></a>
+  </header>
+  <div class="franja">
+    <span class="quien" id="quien">Alumnado y profesorado</span>
+    <div class="franja-acc">
+      <button type="button" class="franja-btn" id="instalar" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>Instalar como app</button>
+      <a class="franja-btn" href="#acceso" id="btnAcceso"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>Acceso profesorado</a>
+    </div>
+  </div>
+  <div class="sesion" id="sesion" hidden>
+    <span class="sesion-nombre"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg><span id="usuario"></span></span>
+    <button type="button" class="sesion-salir" id="salir"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-3M10 17l5-5-5-5M15 12H4"/></svg>Salir</button>
+  </div>
+
+  <section class="presenta">
+    <div class="presenta-sup">
+      <div class="cartel" role="navigation" aria-label="Estás en"><a href="https://claustro-utilidades.vercel.app/" title="Ir al portal de utilidades del profesorado"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-7 9 7M5 10v10h14V10"/></svg>Utilidades</a><span class="sep" aria-hidden="true">|</span><a href="https://claustro-utilidades.vercel.app/#apEtapas" title="Ir al apartado «Por etapa» del portal">Por etapas</a></div>
+      <div class="etqs"><span class="etq">1º Bachillerato</span><span class="etq">2º Bachillerato</span></div>
+    </div>
+    <div class="presenta-cab">
+      <span class="presenta-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/><path d="M22 10v6"/></svg></span>
+      <div>
+        <h1>Bachillerato</h1>
+        <p>Calendario de exámenes de cada clase e itinerario, suscripción a los calendarios en el móvil y enlaces de la PEvAU.</p>
+      </div>
+    </div>
+    <div class="presenta-info">
+      <details class="info-bloque">
+        <summary><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.6 3.4-5.5 6.5-5.5s5.7 1.9 6.5 5.5M16 4.5a3.5 3.5 0 0 1 0 7M18 14.8c1.9.7 3.1 2.4 3.5 5.2"/></svg><span>Alumnado <small>Acceso: sin inicio de sesión</small></span></summary>
+        <ul>
+          <li><b>Calendario:</b> los exámenes de tu clase e itinerario, mes a mes. Se puede imprimir.</li>
+          <li><b>Suscripción a calendario:</b> recibe los exámenes de tu clase en el calendario del móvil (Google, Apple u Outlook).</li>
+          <li><b>PEvAU:</b> enlaces de la Universidad de Sevilla y del Distrito Único Andaluz.</li>
+        </ul>
+      </details>
+      <details class="info-bloque">
+        <summary><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><span>Profesorado <em class="aviso-etq">Cuentas del colegio</em> <small>Acceso: inicio de sesión con Microsoft 365 (@salesianas.org)</small></span></summary>
+        <ul>
+          <li><b>Todo lo del alumnado</b>, sin necesidad de iniciar sesión.</li>
+          <li><b>Exámenes:</b> añadir, cambiar de fecha, editar o eliminar exámenes. Se sincronizan solos con los calendarios de cada clase.</li>
+        </ul>
+        <div class="acc"><a class="btn verde" href="#acceso" id="btnAcceso2"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>Iniciar sesión</a></div>
+      </details>
+    </div>
+  </section>
+
+  <nav class="menu" id="menu" aria-label="Secciones">
+    <div class="menu-g"><button type="button" data-menu="examenes" aria-haspopup="true">Exámenes</button>
+      <div class="desplegable">
+        <button type="button" data-v="calendario" style="--c:#009abb"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4M8 14h2M14 14h2M8 17h2"/></svg>Calendario</button>
+        <button type="button" data-v="suscripcion" style="--c:#8a9400"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>Suscripción a calendario</button>
+      </div></div>
+    <button type="button" data-v="pevau">PEvAU</button>
+  </nav>
+  <div class="offline" id="offline" hidden></div>
+
+  <main>
+    <!-- EXÁMENES › CALENDARIO -->
+    <section id="v-calendario" class="vista">
+      <p class="migas">Exámenes › <b>Calendario</b></p>
+      <div class="panel">
+        <div class="filtro"><span class="filtro-tit">Clase</span><div class="chips" id="filtro-clase"></div></div>
+        <div class="filtro" id="filtro-itin-caja" hidden><span class="filtro-tit">Itinerario</span><div class="chips" id="filtro-itin"></div></div>
+      </div>
+      <div class="panel barra-mes">
+        <div class="mes-nav">
+          <button type="button" class="btn ico" id="mesAnt" aria-label="Mes anterior"><svg class="i" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
+          <h2 id="mes"></h2>
+          <button type="button" class="btn ico" id="mesSig" aria-label="Mes siguiente"><svg class="i" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></button>
+        </div>
+        <div class="acciones">
+          <button type="button" class="btn verde" id="btnNuevo" hidden><svg class="i" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>Nuevo examen</button>
+          <button type="button" class="btn" id="btnHoy">Hoy</button>
+          <button type="button" class="btn" id="btnActualizar" title="Vuelve a cargar los exámenes (por si alguien ha añadido alguno mientras tenías la página abierta)"><svg class="i" viewBox="0 0 24 24"><path d="M21 12a9 9 0 0 1-15.5 6.2L3 16M3 12a9 9 0 0 1 15.5-6.2L21 8M21 3v5h-5M3 21v-5h5"/></svg>Actualizar</button>
+          <button type="button" class="btn" id="btnImprimir"><svg class="i" viewBox="0 0 24 24"><path d="M6 9V3h12v6M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="7"/></svg>Imprimir</button>
+        </div>
+      </div>
+      <div class="rejilla">
+        <div class="dias-sem"><div>Lun</div><div>Mar</div><div>Mié</div><div>Jue</div><div>Vie</div><div>Sáb</div><div>Dom</div></div>
+        <div class="celdas" id="celdas"></div>
+      </div>
+      <div class="agenda" id="agenda"></div>
+    </section>
+
+    <!-- EXÁMENES › SUSCRIPCIÓN A CALENDARIO -->
+    <section id="v-suscripcion" class="vista" hidden>
+      <p class="migas">Exámenes › <b>Suscripción a calendario</b></p>
+      <div class="panel">
+        <h2 class="verde">Recibe los exámenes en tu calendario</h2>
+        <p class="sub">Elige tu clase. Los exámenes nuevos y los cambios de fecha aparecerán solos en el calendario del móvil o del ordenador.</p>
+        <div class="subs" id="subs"></div>
+      </div>
+      <div class="panel">
+        <h2>¿Qué botón uso?</h2>
+        <ol class="pasos">
+          <li><b>Google:</b> abre Google Calendar y pulsa «Añadir». Sirve para Android y para cualquier cuenta de Google.</li>
+          <li><b>iPhone / Outlook:</b> abre el calendario del iPhone, iPad o Mac (o Outlook) y pulsa «Suscribirse».</li>
+          <li>Los cambios pueden tardar unas horas en verse en el móvil: cada aplicación decide cada cuánto se actualiza.</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- PEvAU -->
+    <section id="v-pevau" class="vista" hidden>
+      <p class="migas"><b>PEvAU</b></p>
+      <div class="panel">
+        <h2 class="verde">Prueba de Evaluación de Acceso a la Universidad</h2>
+        <p class="sub">Información oficial sobre la prueba (fechas, sedes, exámenes de otros años, notas) y sobre la preinscripción en las universidades andaluzas.</p>
+        <div class="enlaces">
+          <a class="enlace" href="https://www.us.es/pau" target="_blank" rel="noopener noreferrer">
+            <span class="enlace-logo"><img src="https://www.us.es/sites/default/files/logoPNG_3.png" alt="Logo de la Universidad de Sevilla" onerror="this.outerHTML='<span class=alt>Universidad de Sevilla</span>'"></span>
+            <span><b>Universidad de Sevilla</b><span>PAU / PEvAU: calendario, sedes, exámenes y resultados.</span></span>
+            <svg class="i ext" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+          </a>
+          <a class="enlace" href="https://www.juntadeandalucia.es/economiaconocimientoempresasyuniversidad/sguit/" target="_blank" rel="noopener noreferrer">
+            <span class="enlace-logo dua"><img src="https://www.juntadeandalucia.es/economiaconocimientoempresasyuniversidad/sguit/libportal/imagenes/logoDua.png" alt="Logo del Distrito Único Andaluz" onerror="this.outerHTML='<span class=alt>Distrito Único Andaluz</span>'"></span>
+            <span><b>Distrito Único Andaluz</b><span>Preinscripción, plazos, notas de corte y oferta de grados en Andalucía.</span></span>
+            <svg class="i ext" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACCESO DEL PROFESORADO -->
+    <section id="v-acceso" class="vista" hidden>
+      <div class="login">
+        <div class="tarjeta" id="tarjeta-acceso"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">Escuelas Salesianas María Auxiliadora · Nervión (Sevilla)</footer>
+
+  <!-- Detalle de un examen (y, con sesión, botones para editar o eliminar) -->
+  <dialog id="dlg-detalle">
+    <div class="modal-cab"><h3 id="det-titulo">Examen</h3><button type="button" class="cerrar" data-cerrar aria-label="Cerrar"><svg class="i" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg></button></div>
+    <div class="modal-cuerpo"><dl class="detalle" id="det-cuerpo"></dl></div>
+    <div class="modal-pie">
+      <button type="button" class="btn peligro" id="det-borrar" hidden>Eliminar</button>
+      <span class="sep"></span>
+      <button type="button" class="btn" data-cerrar>Cerrar</button>
+      <button type="button" class="btn pri" id="det-editar" hidden>Editar</button>
+    </div>
+  </dialog>
+
+  <!-- Nuevo examen / editar examen (solo con sesión) -->
+  <dialog id="dlg-examen">
+    <form id="form-examen" method="dialog">
+      <div class="modal-cab"><h3 id="ex-titulo">Nuevo examen</h3><button type="button" class="cerrar" data-cerrar aria-label="Cerrar"><svg class="i" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg></button></div>
+      <div class="modal-cuerpo">
+        <input type="hidden" id="ex-id">
+        <label class="campo">Profesor/a<select id="ex-profe" required></select></label>
+        <label class="campo">Asignatura<select id="ex-asig" required disabled></select></label>
+        <div class="form-grid">
+          <label class="campo">Clase<select id="ex-clase" required disabled></select></label>
+          <label class="campo">Itinerario<select id="ex-itin" required disabled></select></label>
+        </div>
+        <label class="campo">Fecha del examen<input type="date" id="ex-fecha" required></label>
+        <label class="campo">Contenido / temas<textarea id="ex-cont" rows="2" placeholder="Ej.: temas 1 a 3"></textarea></label>
+        <p class="quien-edita" id="ex-quien"></p>
+      </div>
+      <div class="modal-pie">
+        <span class="sep"></span>
+        <button type="button" class="btn" data-cerrar>Cancelar</button>
+        <button type="submit" class="btn pri" id="ex-guardar">Guardar</button>
+      </div>
+    </form>
+  </dialog>
+
+  <!-- Opciones de impresión -->
+  <dialog id="dlg-imprimir">
+    <div class="modal-cab"><h3>¿Qué quieres imprimir?</h3><button type="button" class="cerrar" data-cerrar aria-label="Cerrar"><svg class="i" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg></button></div>
+    <div class="modal-cuerpo">
+      <div class="filtro"><span class="filtro-tit">Clase</span><div class="chips" id="imp-clase"></div></div>
+      <div class="filtro" id="imp-itin-caja" hidden><span class="filtro-tit">Itinerario</span><div class="chips" id="imp-itin"></div></div>
+      <p class="nota">Se ajusta a un folio A4 apaisado con el logo, el mes que estás viendo y el filtro elegido. En el diálogo de impresión puedes elegir «Guardar como PDF».</p>
+    </div>
+    <div class="modal-pie"><span class="sep"></span><button type="button" class="btn" data-cerrar>Cancelar</button><button type="button" class="btn pri" id="imp-ok">Imprimir</button></div>
+  </dialog>
+
+  <!-- Instalar en iPhone/iPad (no tienen botón de instalar) -->
+  <dialog id="dlg-instalar">
+    <div class="modal-cab"><h3>Instalar la app</h3><button type="button" class="cerrar" data-cerrar aria-label="Cerrar"><svg class="i" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg></button></div>
+    <div class="modal-cuerpo">
+      <ol class="pasos">
+        <li>Pulsa el botón <b>Compartir</b> de Safari (el cuadrado con una flecha hacia arriba).</li>
+        <li>Elige <b>«Añadir a pantalla de inicio»</b>.</li>
+        <li>Pulsa <b>Añadir</b>. Aparecerá el icono del colegio en tu pantalla.</li>
+      </ol>
+    </div>
+    <div class="modal-pie"><span class="sep"></span><button type="button" class="btn pri" data-cerrar>Entendido</button></div>
+  </dialog>
+
+  <div class="toasts" id="toasts" aria-live="polite"></div>
+  <div id="print-view"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
