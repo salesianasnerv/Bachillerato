@@ -394,7 +394,9 @@
 
   async function comprobarSesion() {
     const c = await cliente();
-    const { data: { session } } = await c.auth.getSession();
+    let { data: { session } } = await c.auth.getSession();
+    // Abierta desde la app de Teams: entra sola con la cuenta de Teams
+    if (!session && await window.TeamsSSO?.entrar(c)) ({ data: { session } } = await c.auth.getSession());
     if (!session) { yo = null; pintarSesion(); return null; }
     const u = session.user, email = (u.email || "").toLowerCase();
     if (!DOMINIOS.some((d) => email.endsWith("@" + d))) {
@@ -411,6 +413,7 @@
     $("loginError").textContent = "";
     try {
       const c = await cliente();
+      if (await window.TeamsSSO?.entrar(c)) { await comprobarSesion(); location.hash = "#calendario"; return; }
       try { sessionStorage.setItem(VOLVER_KEY, "1"); } catch {}
       const { error } = await c.auth.signInWithOAuth({ provider: "azure", options: { scopes: "email profile", redirectTo: location.origin + location.pathname } });
       if (error) throw error;
@@ -476,7 +479,7 @@
   addEventListener("online", () => cargarExamenes());
   if (!navigator.onLine) avisoSinConexion();
 
-  if (haySesionGuardada() || vieneDelLogin()) {
+  if (haySesionGuardada() || vieneDelLogin() || window.TeamsSSO?.enTeams) {
     comprobarSesion()
       .catch((e) => toast(e.message || String(e), "error", 7000))
       .finally(() => {
