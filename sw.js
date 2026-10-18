@@ -1,7 +1,7 @@
 // Permite instalar la web de Bachillerato como app y abrirla sin conexión.
 // Los exámenes se piden siempre al momento (la copia sin conexión la guarda la página).
 // Si cambias la lista de archivos, sube también el número de VERSION.
-const VERSION = 'v1';
+const VERSION = 'v2';
 const CACHE = `bachillerato-${VERSION}`;
 const CARCASA = ['./', 'index.html', 'styles.css', 'app.js', 'config.js', 'datos.js', 'manifest.json', 'logo.svg',
   'favicon-32.png', 'favicon-48.png', 'icon-180.png', 'icon-192.png', 'icon-512.png', 'icon-maskable-512.png'];
