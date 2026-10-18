@@ -429,7 +429,6 @@
     $("btnAcceso").hidden = !!yo;
     $("btnAcceso2").hidden = !!yo;
     $("btnNuevo").hidden = !yo;
-    $("quien").textContent = yo ? "Profesorado · puedes añadir y editar exámenes" : "Alumnado y profesorado";
     pintarCalendario();
     if (vistaActual() === "acceso") pintarAcceso();
   }
